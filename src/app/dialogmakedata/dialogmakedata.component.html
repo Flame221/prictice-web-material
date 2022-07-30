@@ -1,0 +1,49 @@
+<div class="form-group">
+
+  <h1 mat-dialog-title>Add Contacts Form</h1>
+  
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="productForm">
+    <mat-grid-list cols="2" rowHeight="85px">
+      <mat-grid-tile colspan="2">
+        <mat-form-field  appearance="outline">
+          <mat-icon matSuffix>contacts</mat-icon>
+          <mat-label>Full Name</mat-label>
+          <input formControlName="fullName" type="text"matInput placeholder="Enter your full name" type="text">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" type="tel">
+          <mat-label>Phone Number</mat-label>
+          <input formControlName="phoneNumber" matInput placeholder="+48-000-000-000">
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline" type="email">
+          <mat-label>E-mail</mat-label>
+          <input formControlName="email" matInput placeholder="example@gmail.com">
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2">
+        <mat-form-field appearance="outline">
+          <mat-label>Favorite food</mat-label>
+          <mat-select formControlName="favoriteFood">
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> 
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-flat-button color="warn" (click)='onClose()'>Close</button>
+  <button mat-flat-button style="margin-left: 8px;" color="primary" (click)="addContact()">{{actionBtn}}</button>
+</mat-dialog-actions>
+
+</div>
+

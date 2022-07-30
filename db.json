@@ -1,0 +1,35 @@
+{
+  "contactsList": [
+    {
+      "fullName": "Elena Myskova",
+      "phoneNumber": "+48-993-092-120",
+      "email": "myskova@gmail.com",
+      "favoriteFood": "tacos-2",
+      "id": 1
+    },
+    {
+      "fullName": "John Snow",
+      "phoneNumber": "+48-232-432-123",
+      "email": "johnsnow1@gmail.com",
+      "favoriteFood": "steak-0",
+      "id": 2
+    },
+    {
+      "fullName": "Hobit Kow",
+      "phoneNumber": "+48-832-231-231",
+      "email": "hobitkow@gmai.com",
+      "favoriteFood": "pizza-1",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
